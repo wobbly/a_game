@@ -1,0 +1,4 @@
+﻿  a_game.cpp
+c:\users\robble\documents\visual studio 2017\projects\a_game\a_game\makelevel.h(8): warning C4700: uninitialized local variable 'roomnum' used
+  a_game.vcxproj -> C:\Users\robble\documents\visual studio 2017\Projects\a_game\Debug\a_game.exe
+  a_game.vcxproj -> C:\Users\robble\documents\visual studio 2017\Projects\a_game\Debug\a_game.pdb (Partial PDB)
