@@ -1,8 +1,8 @@
 #include <thread>
 #include <chrono>
 
-int quit() {
-
+int quit()
+{
 	system ("clear");
 	std::cout << "Seems like you just quit then...\n";
 	std::this_thread::sleep_for (std::chrono::seconds(1));

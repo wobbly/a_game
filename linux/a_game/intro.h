@@ -22,7 +22,7 @@ void intro()
 	{
 		system("clear");
 		cout << "That doesn't seem like a no!\n";
-		this_thread::sleep_for(chrono::seconds(1));
+		this_thread::sleep_for(chrono::seconds(2));
 		system("clear");
 
 		cout << "Loading the first room.\n";
@@ -56,4 +56,5 @@ void intro()
 			quit();
 			//real function here will start the game
 	}
+	return;
 }
