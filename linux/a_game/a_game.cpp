@@ -6,7 +6,7 @@
 int main() 
 {
 	intro();
-	
+
 	//ending if it gets here without some other graceful exit
 	system ("clear");
 	std::cout << "By hook or by crook, A Game has ended!\n";
