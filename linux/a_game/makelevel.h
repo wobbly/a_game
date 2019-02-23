@@ -12,10 +12,9 @@ class room
 
 	void savetofile ()
 	{
-		
-	}
-};	
 
+	}
+};
 
 short getroomnum()
 {
@@ -31,20 +30,29 @@ short getroomnum()
 //check for existing room
 
 	return roomnum;
-} 
-
-room makelevel()
-{
-	room current;
-	string answer = "";
-
-	current.roomnum = getroomnum();
-
-	cout << "Please enter a description for the room and then press enter:\n\n";
-
-	getline(std::cin, answer);
-	current.description = answer;
-
-	return current;
 }
 
+string getroomdesc()
+{
+	string answer = "";
+	system("clear");
+	short keystroke = 0;
+	char *input;
+	while (char input != "\n")
+	{
+		cout << "Please enter a description for the room and then press enter:\n\n";
+		get (cin, input);
+		answer[keystroke]=input;
+		keystroke++;
+	}
+	getline(cin, answer);
+	return answer;
+}
+
+void makelevel()
+{
+	room current;
+
+	current.roomnum = getroomnum();
+	current.description = getroomdesc();
+}
