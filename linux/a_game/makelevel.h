@@ -1,7 +1,28 @@
 #include <iostream>
 #include <string>
+#include <curses.h>
+#include <ncurses.h>
 
 using namespace std;
+
+string getparag(string prompt)
+{
+	string parag = "";
+	short keystroke = 0;
+	char input;
+	while (input != '\n')
+	{
+		cout << prompt << "\n\n";
+		cout << parag;
+		fflush(stdin);
+		input = getch();
+		parag[keystroke] = input;
+		system ("clear");
+		keystroke++;
+	}
+	return parag;
+}
+
 
 class room
 {
@@ -34,18 +55,7 @@ short getroomnum()
 
 string getroomdesc()
 {
-	string answer = "";
-	system("clear");
-	short keystroke = 0;
-	char *input;
-	while (char input != "\n")
-	{
-		cout << "Please enter a description for the room and then press enter:\n\n";
-		get (cin, input);
-		answer[keystroke]=input;
-		keystroke++;
-	}
-	getline(cin, answer);
+	string answer = getparag("Please enter the description for the room: ");
 	return answer;
 }
 
